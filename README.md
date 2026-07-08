@@ -1,6 +1,6 @@
-# 🚀 Programming Advices: Roadmap & Problem Solving
+# 🚀 Programming Advices & General Self-Learning: Roadmap & Problem Solving
 
-Welcome to my learning journey! This repository contains all the practical exercises, problem-solving challenges, and projects I am/was developing as I progress/ed through the rigorous **Programming Advices** roadmap created by Eng. Mohammed Abu Hadhoud.
+Welcome to my learning journey! This repository contains all the practical exercises, problem-solving challenges, and projects I am/was developing as I progress/ed through the rigorous Programming Advices roadmap created by Eng. Mohammed Abu Hadhoud. Additionally, it serves as a sandbox for general self-learning and practice in advanced topics like dynamic programming.
 
 ---
 
