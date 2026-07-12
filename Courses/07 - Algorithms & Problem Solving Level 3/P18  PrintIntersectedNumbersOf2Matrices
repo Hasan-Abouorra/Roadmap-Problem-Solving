@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+bool IsNumberInMatrix(int Matrix[][100], short Rows, short Cols, int number)
+{
+    for (int i = 0; i < Rows; i++)
+        for (int j = 0; j < Cols; j++)
+            if (Matrix[i][j] == number)
+                return true;
+    return false;
+}
+
+
+void PrintIntersectedNumbersOf2Matrices(int Matrix1[100][100], int Matrix2[100][100], short Rows, short Cols) {
+    cout << "Intersected numbers of Matrix1 and Matrix2:\n";
+    for (int i = 0; i < Rows; i++) {
+        for (int j = 0; j < Cols; j++) {
+            if (IsNumberInMatrix(Matrix2, Rows, Cols, Matrix1[i][j])) {
+                cout << Matrix1[i][j] << " ";
+            }
+        }
+    }
+    cout << "\n";
+}
+
+
+
+int main(){
+	
+int Matrix1_3x3[100][100] = { {77, 5, 12}, {22, 20, 1}, {1, 0, 9} };
+int Matrix2_3x3[100][100] = { {5, 80, 90}, {22, 77, 1}, {10, 8, 53} };
+PrintIntersectedNumbersOf2Matrices(Matrix1_3x3, Matrix2_3x3, Rows, Cols);
+    
+    return 0;
+}
