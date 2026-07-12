@@ -1,0 +1,40 @@
+
+void Print3xArray(int array[100][100], short Rows, short Cols) {
+    for (int i = 0; i < Rows; i++) {
+        for (int j = 0; j < Cols; j++)
+            printf("%02d  ", array[i][j]);
+        cout << "\n";
+    }
+}
+
+int GetMinimumOfMatrix(int Matrix[][100], short Rows, short Cols) {
+	int min = Matrix[0][0];
+	for (int i = 0; i < Rows; i++)
+		for (int j = 0; j < Cols; j++)
+			if (Matrix[i][j] < min)
+				min = Matrix[i][j];
+	return min;
+}
+
+int GetMaximumOfMatrix(int Matrix[][100], short Rows, short Cols) {
+	int max = Matrix[0][0];
+	for (int i = 0; i < Rows; i++)
+		for (int j = 0; j < Cols; j++)
+			if (Matrix[i][j] > max)
+				max = Matrix[i][j];
+	return max;
+}
+
+int main(){
+  short Rows = 3, Cols = 3;
+	int Matrix1_3x3[100][100] = { {77, 5, 12}, {22, 20, 1}, {1, 0, 9} };
+
+    Print3xArray(Matrix1_3x3, Rows, Cols);
+    cout << "Maximum Number is: " << GetMaximumOfMatrix(Matrix1_3x3, Rows, Cols)<<"\n";
+    cout << "Minimum Number is: " << GetMinimumOfMatrix(Matrix1_3x3, Rows, Cols) << "\n";
+
+    return 0;
+}
+
+
+
