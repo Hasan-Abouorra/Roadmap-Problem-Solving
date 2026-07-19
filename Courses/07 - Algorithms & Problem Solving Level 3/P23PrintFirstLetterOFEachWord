@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string ReadString(string Message) {
+	string UserInput;
+	cout <<"\n"<< Message;
+	getline(cin, UserInput);
+	return UserInput;
+}
+
+void PrintFIrsLetterOfEachWord(string Sentence) {
+	for (size_t ch = 0; ch < Sentence.length(); ch++) {
+		if (ch == 0) 
+			cout << Sentence[ch]<< "\n";
+		
+		if (Sentence[ch] == ' ' && ch != Sentence.length() - 1)
+			cout << Sentence[ch + 1] << "\n";
+			
+	}
+}
+
+
+int main() {
+	
+	string Sentence = "Hasan Hasan Abouorra @Prgramming Advices " ;
+	
+	
+	PrintFIrsLetterOfEachWord(Sentence);
+	PrintFIrsLetterOfEachWord(ReadString("Please Enter Your String? "));
+    return 0;
+}
